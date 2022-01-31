@@ -1,3 +1,9 @@
+
+<p align="center">
+  <a href="#"><img src="https://user-images.githubusercontent.com/22800380/151887777-de7983ef-55e3-4fbb-b194-a5a6d765a399.png" height=120 /></a>
+</p>
+
+
 # NFT ART GENERATOR
 
 A simple application to generate NFT's through a graphical interface. Simple as that ^_^
@@ -29,3 +35,5 @@ then browse that directory and reorder them as you like
 │  │  ├─ file6.png  
 │  │  ├─ ...  
 │  ├─ ..
+
+![NFT art generator](https://user-images.githubusercontent.com/22800380/151887643-9d45ee22-c7bf-4819-8316-1af7422821e5.PNG)
