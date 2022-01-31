@@ -3,10 +3,14 @@ C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\NFT Ar
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\NFT Art Generator.pdb
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\NFT Art Generator.xml
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.vbproj.AssemblyReference.cache
-C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT_Art_Generator.Form1.resources
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT_Art_Generator.Resources.resources
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.vbproj.GenerateResource.cache
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.vbproj.CoreCompileInputs.cache
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.exe
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.xml
 C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.pdb
+C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT_Art_Generator.FormMain.resources
+C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\WeightedRandomizer.dll
+C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\WeightedRandomizer.pdb
+C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\bin\Debug\WeightedRandomizer.xml
+C:\Users\21621\source\repos\NFT Art Generator\NFT Art Generator\obj\Debug\NFT Art Generator.vbproj.CopyComplete

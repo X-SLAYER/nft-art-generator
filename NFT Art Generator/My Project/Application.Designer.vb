@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.NFT_Art_Generator.Form1
+            Me.MainForm = Global.NFT_Art_Generator.FormMain
         End Sub
     End Class
 End Namespace

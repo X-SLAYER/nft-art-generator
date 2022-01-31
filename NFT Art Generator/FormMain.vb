@@ -1,10 +1,13 @@
-﻿Imports System.IO
+﻿Imports System.Drawing.Imaging
+Imports System.IO
 
 
-Public Class Form1
+Public Class FormMain
 
     Dim heldDownItem As ListViewItem
     Dim heldDownPoint As Point
+    Dim ServiceGen As GenService = New GenService()
+    Dim NFTService As NFTService = New NFTService()
 
     Public Sub New()
         InitializeComponent()
@@ -25,15 +28,12 @@ Public Class Form1
             For Each folderName In directories
                 Dim itm As New ListViewItem
                 itm.SubItems.Add(Path.GetFileName(folderName))
+                itm.SubItems.Add(Directory.GetFiles(folderName).Length)
                 itm.Tag = folderName
                 itm.ImageIndex = 0
                 Lv1.Items.Add(itm)
             Next
 
-            'Dim directory As DirectoryInfo = New DirectoryInfo(I.SelectedPath)
-            'Dim files As FileInfo() = directory.GetFiles()
-            'Dim filesPath As String() = files.[Select](Function(person) person.FullName).ToArray()
-            'Combine(filesPath)
         End If
     End Sub
 
@@ -111,8 +111,41 @@ Public Class Form1
     End Sub
 
     Private Sub BtnGenerate_Click(sender As Object, e As EventArgs) Handles BtnGenerate.Click
-        For Each folder As ListViewItem In Lv1.Items
-            MsgBox(folder.Tag)
-        Next
+
+        If Lv1.Items.Count <= 0 Then
+            MessageBox.Show("There is no layers !", "X-SLAYER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return
+        End If
+
+        Try
+            Dim folderPaths As New List(Of String)
+            For Each folder As ListViewItem In Lv1.Items
+                folderPaths.Add(folder.Tag)
+            Next
+            Dim layers = ServiceGen.Load(folderPaths.ToArray())
+            Dim imageDescriptors As List(Of NFTImage) = ServiceGen.Create(layers, nbSize.Value)
+            pBar.Maximum = nbSize.Value
+
+            If Not Directory.Exists(txtOutputImages.Text) Then
+                Directory.CreateDirectory(txtOutputImages.Text)
+            End If
+
+            Dim collectionNumber As Integer = 0
+
+            For Each item In imageDescriptors
+                Dim combinedImages = NFTService.Combine(item.Files.ToArray())
+                Dim filename = $"{If(txtPrefix.Text Is Nothing, "SLAYER_", txtPrefix.Text)}{collectionNumber}.png"
+                combinedImages.Save($"{txtOutputImages.Text}{Path.DirectorySeparatorChar}{filename}", ImageFormat.Png)
+                combinedImages?.Dispose()
+                collectionNumber += 1
+                pBar.Increment(1)
+            Next
+            If MessageBox.Show("Generating Completed ^_^" & vbCrLf & "Do You Want To open file location", "X-SLAYER", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+                Process.Start(txtOutputImages.Text)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
     End Sub
 End Class
