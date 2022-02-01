@@ -25,6 +25,11 @@ Partial Class FormMain
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.FoldersGroup = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtPrefix = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.nbSize = New System.Windows.Forms.NumericUpDown()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtOutputImages = New System.Windows.Forms.TextBox()
@@ -39,19 +44,14 @@ Partial Class FormMain
         Me.linkedin = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.pBar = New System.Windows.Forms.ProgressBar()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.nbSize = New System.Windows.Forms.NumericUpDown()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPrefix = New System.Windows.Forms.TextBox()
         Me.Lv1 = New NFT_Art_Generator.ListViewCustomReorder.ListViewEx()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FoldersGroup.SuspendLayout()
-        Me.layersOrderGroup.SuspendLayout()
-        CType(Me.nbSize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbSize, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.layersOrderGroup.SuspendLayout()
         Me.SuspendLayout()
         '
         'FoldersGroup
@@ -73,6 +73,55 @@ Partial Class FormMain
         Me.FoldersGroup.TabIndex = 0
         Me.FoldersGroup.TabStop = False
         Me.FoldersGroup.Text = "Folders"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(236, 145)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(107, 86)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
+        'txtPrefix
+        '
+        Me.txtPrefix.Location = New System.Drawing.Point(68, 195)
+        Me.txtPrefix.Name = "txtPrefix"
+        Me.txtPrefix.Size = New System.Drawing.Size(99, 22)
+        Me.txtPrefix.TabIndex = 9
+        Me.txtPrefix.Text = "SLAYER_"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 198)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 14)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Prefix : "
+        '
+        'nbSize
+        '
+        Me.nbSize.Location = New System.Drawing.Point(68, 145)
+        Me.nbSize.Maximum = New Decimal(New Integer() {1569325055, 23283064, 0, 0})
+        Me.nbSize.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nbSize.Name = "nbSize"
+        Me.nbSize.Size = New System.Drawing.Size(99, 22)
+        Me.nbSize.TabIndex = 7
+        Me.nbSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.nbSize.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(6, 148)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 14)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "NFT Size :"
         '
         'Button2
         '
@@ -163,6 +212,7 @@ Partial Class FormMain
         Me.Telegram.Size = New System.Drawing.Size(53, 14)
         Me.Telegram.TabIndex = 3
         Me.Telegram.TabStop = True
+        Me.Telegram.Tag = "https://t.me/SLAYERS404"
         Me.Telegram.Text = "Telegram"
         '
         'Instagram
@@ -174,6 +224,7 @@ Partial Class FormMain
         Me.Instagram.Size = New System.Drawing.Size(57, 14)
         Me.Instagram.TabIndex = 4
         Me.Instagram.TabStop = True
+        Me.Instagram.Tag = "https://www.instagram.com/iiheb_/"
         Me.Instagram.Text = "Instagram"
         '
         'linkedin
@@ -185,6 +236,7 @@ Partial Class FormMain
         Me.linkedin.Size = New System.Drawing.Size(54, 14)
         Me.linkedin.TabIndex = 5
         Me.linkedin.TabStop = True
+        Me.linkedin.Tag = "https://www.facebook.com/iih3b/"
         Me.linkedin.Text = "Facebook"
         '
         'LinkLabel1
@@ -193,10 +245,11 @@ Partial Class FormMain
         Me.LinkLabel1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.Location = New System.Drawing.Point(616, 312)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(48, 14)
+        Me.LinkLabel1.Size = New System.Drawing.Size(40, 14)
         Me.LinkLabel1.TabIndex = 6
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "LinkedIn"
+        Me.LinkLabel1.Tag = "https://github.com/X-SLAYER"
+        Me.LinkLabel1.Text = "Github"
         '
         'pBar
         '
@@ -205,45 +258,6 @@ Partial Class FormMain
         Me.pBar.Name = "pBar"
         Me.pBar.Size = New System.Drawing.Size(692, 20)
         Me.pBar.TabIndex = 7
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 148)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 14)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "NFT Size :"
-        '
-        'nbSize
-        '
-        Me.nbSize.Location = New System.Drawing.Point(68, 145)
-        Me.nbSize.Maximum = New Decimal(New Integer() {1569325055, 23283064, 0, 0})
-        Me.nbSize.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.nbSize.Name = "nbSize"
-        Me.nbSize.Size = New System.Drawing.Size(99, 22)
-        Me.nbSize.TabIndex = 7
-        Me.nbSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.nbSize.Value = New Decimal(New Integer() {10, 0, 0, 0})
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 198)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 14)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Prefix : "
-        '
-        'txtPrefix
-        '
-        Me.txtPrefix.Location = New System.Drawing.Point(68, 195)
-        Me.txtPrefix.Name = "txtPrefix"
-        Me.txtPrefix.Size = New System.Drawing.Size(99, 22)
-        Me.txtPrefix.TabIndex = 9
-        Me.txtPrefix.Text = "SLAYER_"
         '
         'Lv1
         '
@@ -277,16 +291,6 @@ Partial Class FormMain
         Me.ColumnHeader3.Text = "Count"
         Me.ColumnHeader3.Width = 51
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(236, 145)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(107, 86)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
@@ -307,9 +311,9 @@ Partial Class FormMain
         Me.Text = "NFT Art Generator | By X-SLAYER"
         Me.FoldersGroup.ResumeLayout(False)
         Me.FoldersGroup.PerformLayout()
-        Me.layersOrderGroup.ResumeLayout(False)
-        CType(Me.nbSize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbSize, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.layersOrderGroup.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

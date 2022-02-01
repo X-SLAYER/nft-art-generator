@@ -16,7 +16,7 @@ Friend Class NFTService
                 Dim bitmap = New Bitmap(image)
 
                 If bitmap.Width <> width OrElse bitmap.Height <> height Then
-                    Throw New Exception(image)
+                    Throw New Exception("All images MUST have the same dimensions (width and height).")
                 End If
 
                 images.Add(bitmap)
@@ -31,7 +31,6 @@ Friend Class NFTService
             Return baseImage
         Catch e As Exception
             baseImage?.Dispose()
-            MsgBox(e.Message)
             Throw e
         Finally
             For Each image In images

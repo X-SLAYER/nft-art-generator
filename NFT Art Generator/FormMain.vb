@@ -144,8 +144,24 @@ Public Class FormMain
                 Process.Start(txtOutputImages.Text)
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "X-SLAYER", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+
+    Private Sub Telegram_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Telegram.LinkClicked
+        Process.Start(Telegram.Tag)
+    End Sub
+
+    Private Sub Instagram_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Instagram.LinkClicked
+        Process.Start(Instagram.Tag)
+    End Sub
+
+    Private Sub linkedin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkedin.LinkClicked
+        Process.Start(linkedin.Tag)
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start(LinkLabel1.Tag)
     End Sub
 End Class

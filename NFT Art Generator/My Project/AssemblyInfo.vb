@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("NFT Art Generator")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyDescription("Coded By X-SLAYER")>
+<Assembly: AssemblyCompany("X-SLAYER")>
 <Assembly: AssemblyProduct("NFT Art Generator")>
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2022")>
+<Assembly: AssemblyCopyright("Copyright © X-SLAYER. 2022")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

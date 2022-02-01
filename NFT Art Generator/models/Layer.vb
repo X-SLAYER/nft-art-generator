@@ -4,7 +4,6 @@ Public Class Layer
     Public Property Id As Integer
     Public Property Name As String
     Public Property Elements As List(Of Element)
-
     Public Property Randomizer As IWeightedRandomizer(Of Integer)
 
     Public Overrides Function ToString() As String
