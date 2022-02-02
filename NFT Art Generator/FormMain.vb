@@ -144,7 +144,7 @@ Public Class FormMain
                 Process.Start(txtOutputImages.Text)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "X-SLAYER", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        MessageBox.Show(ex.Message, "X-SLAYER", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub

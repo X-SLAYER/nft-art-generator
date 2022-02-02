@@ -1,12 +1,12 @@
 ﻿
 Friend Class NFTService
 
-    Public Function Combine(ByVal files As String()) As Bitmap
+    Public Function Combine(files As String()) As Bitmap
         Dim images = New List(Of Bitmap)()
         Dim baseImage As Bitmap = Nothing
-
+        Dim imageIndex As Integer = 0
         Try
-            Dim tempBitmap = New Bitmap(files(0))
+            Dim tempBitmap = New Bitmap(files(imageIndex))
             Dim width = tempBitmap.Width
             Dim height = tempBitmap.Height
             tempBitmap?.Dispose()
@@ -31,7 +31,7 @@ Friend Class NFTService
             Return baseImage
         Catch e As Exception
             baseImage?.Dispose()
-            Throw e
+            Throw New Exception("Error with this image: " & files(0))
         Finally
             For Each image In images
                 image.Dispose()
