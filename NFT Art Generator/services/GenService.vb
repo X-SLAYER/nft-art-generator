@@ -51,7 +51,7 @@ Class GenService
         Dim layers = New List(Of Layer)()
         For i As Integer = 0 To paths.Length - 1
             Dim randomizer = New DynamicWeightedRandomizer(Of Integer)
-            Dim filePaths = IO.Directory.GetFiles(paths(i))
+            Dim filePaths = IO.Directory.GetFiles(paths(i)).Where(Function(f) f.EndsWith(".png")).ToArray()
             If filePaths.Length > 0 Then
                 Dim elements = HandleElements(filePaths, randomizer)
                 If (elements.Count > 0) Then
